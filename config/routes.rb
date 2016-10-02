@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-
+  if Rails.env.development?
+    mount LetterOpenerWeb::Engine, at: "/letter_opener"
+  end
 
   devise_for :users
   resources :blogs, only: [:index, :new, :create, :edit, :update ,:destroy] do
@@ -7,7 +9,7 @@ Rails.application.routes.draw do
       post :confirm
     end
   end
-  
+
   resources :contacts, only: [:new, :create] do
     collection do
       post :confirm
@@ -15,5 +17,4 @@ Rails.application.routes.draw do
   end
   
   root 'top#index'
-  
  end
