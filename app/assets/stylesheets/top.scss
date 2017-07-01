@@ -58,8 +58,10 @@ header {
 .main-header {
   width: 100%;
     background-size: cover;
-    /*background-image: url(abroad.jpg);*/
+    background-image: url(abroad.jpg);
     background-attachment: fixed;
+    height:730px;
+
 }
 
 .main-header img {
@@ -71,7 +73,7 @@ header {
 .about {
   background-color: white;
   color: #333;
-  padding: 80px;
+  padding-bottom: 20px;
 }
 
 .function {
